@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hendry Poul 25022023</title>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                height: 30px;
+                width: 1470px;
+                border-collapse: collapse;
+                text-align: center;
+            }
+            a {
+                color: white;
+                font-weight: bold;
+                background-color: black;
+                width: 120px;
+                text-align: left;
+                text-decoration: none;
+                font-size: 20px;
+            }
+            nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: left;
+                min-height: 3vh;
+                background-color: black;
+                font-family: "Montserrat", sans-serif;
+                padding: 10px;
+            }
+            button {
+                color: white;
+                background-color: black;
+            }
+            li {
+                float: left;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a class="Dashboard" href="#">Dashboard</a></li>
+            </ul>
+        </nav><br/>
+        &nbsp&nbsp&nbsp<button onclick="myCreateFunction()">Add A New Row</button><br/>
+        <table id="myTable">&nbsp
+            <tr>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Student Roll</th>
+                <th>Subject</th>
+                <th>Marks</th>
+                <th>Marked By</th>
+                <th>Save</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Avi Vashishta</td>
+              <td>2020500</td>
+              <td>English</td>
+              <td>95</td>
+              <td>teacher@gmail.com</td>
+              <td><button>Save</button></td>
+            </tr>
+        </table><br>
+       
+        <script>
+            tableData = [{id:1, student_name:"Avi", student_roll:"2020500", subject:"english", marks:95, markedBy:"teacher"},
+                        {id:2, }];
+            function myCreateFunction() {
+                var table = document.getElementById("myTable");
+                var row = table.insertRow(0);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+                var cell6 = row.insertCell(5);
+                var cell7 = row.insertCell(6);
+                cell1.innerHTML = "";
+                cell2.innerHTML = "";
+                cell3.innerHTML = "";
+                cell4.innerHTML = "";
+                cell5.innerHTML = "";
+                cell6.innerHTML = "";
+                cell7.innerHTML = "";
+            }
+
+        </script>
+    </body>
+</html>
